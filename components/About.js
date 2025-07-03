@@ -6,11 +6,7 @@ export default function About() {
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">Tentang Inesa</h2>
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
-            <img
-              src="/inesa.png"
-              alt="Desa Digital"
-              className="rounded-xl shadow-lg card max-w-[180px] sm:max-w-[200px] mx-auto"
-            />
+          
           </div>
           <div className="md:w-1/2">
             <p className="text-lg text-gray-600 mb-6">
