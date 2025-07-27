@@ -17,47 +17,47 @@ export default function Header() {
   return (
     <header
       className={`fixed w-full top-0 z-20 transition-colors duration-300 ${
-        isScrolled ? 'bg-green-600/80 backdrop-blur-sm shadow-lg' : 'bg-white shadow-none'
+        isScrolled ? 'bg-gradient-to-b from-green-200 to-transparent' : 'bg-gradient-to-b from-green-200 to-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <img src={isScrolled ? "/white.png" : "/green.png"} alt="Logo Inesa" className="h-8" />
+          <img src="/green.png" alt="Logo Inesa" className="h-8 mr-8" />
         </div>
-        <nav className="space-x-8">
+        <nav className="flex space-x-8 mx-auto">
           <Link
             href="#home"
-            className={`font-semibold ${
-              isScrolled ? 'text-white hover:text-gray-200' : 'text-green-600 hover:text-green-800'
-            }`}
+            className="font-semibold text-green-800 hover:text-green-900"
           >
             Beranda
           </Link>
           <Link
             href="#about"
-            className={`font-semibold ${
-              isScrolled ? 'text-white hover:text-gray-200' : 'text-green-600 hover:text-green-800'
-            }`}
+            className="font-semibold text-green-800 hover:text-green-900"
           >
-            Tentang
+            Upaya
           </Link>
           <Link
             href="#services"
-            className={`font-semibold ${
-              isScrolled ? 'text-white hover:text-gray-200' : 'text-green-600 hover:text-green-800'
-            }`}
+            className="font-semibold text-green-800 hover:text-green-900"
           >
-            Layanan
+            Desa Digital
           </Link>
           <Link
             href="#contact"
-            className={`font-semibold ${
-              isScrolled ? 'text-white hover:text-gray-200' : 'text-green-600 hover:text-green-800'
-            }`}
+            className="font-semibold text-green-800 hover:text-green-900"
           >
-            Kontak
+            Publikasi
           </Link>
         </nav>
+        <div>
+          <Link
+            href="#contact"
+            className="font-semibold text-white bg-green-600 px-6 py-2 rounded hover:bg-green-700 transition"
+          >
+            Hubungi Kami
+          </Link>
+        </div>
       </div>
     </header>
   );
