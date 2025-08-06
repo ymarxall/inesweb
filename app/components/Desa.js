@@ -79,7 +79,7 @@ export default function Desa() {
           {/* Mobile Timeline - Single Column */}
           <div className="block lg:hidden">
             {/* Mobile Timeline Line */}
-            <div className="absolute left-4 sm:left-6 top-0 bottom-8 w-0.5 bg-gray-300"></div>
+            <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-gray-300"></div>
 
             <div className="space-y-6 sm:space-y-8">
               {timelineData.map((item, index) => (
@@ -110,17 +110,12 @@ export default function Desa() {
                 </div>
               ))}
             </div>
-
-            {/* Mobile End Indicator */}
-            <div className="absolute left-4 sm:left-6 top-full mt-2 flex justify-center">
-              <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-gray-400 shadow-inner"></div>
-            </div>
           </div>
 
           {/* Desktop Timeline - Alternating Layout */}
           <div className="hidden lg:block">
             {/* Desktop Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-8 h-full w-1 bg-gray-300"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-300"></div>
 
             <div className="space-y-16">
               {timelineData.map((item, index) => (
@@ -150,17 +145,17 @@ export default function Desa() {
                 </div>
               ))}
             </div>
-
-            {/* Desktop End Indicator */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 flex justify-center">
-              <div className="w-4 h-4 rounded-full bg-gray-400 shadow-inner"></div>
-            </div>
           </div>
 
-          {/* Call to Action (opsional) */}
-          <div className="text-center mt-12 lg:mt-20">
-           
+          {/* Optional: End Indicator */}
+          <div className="flex justify-center mt-8 sm:mt-12 lg:mt-16">
+            {/* Tambahkan icon akhir jika diperlukan */}
           </div>
+        </div>
+
+        {/* Call to Action (opsional) */}
+        <div className="text-center mt-8 sm:mt-12 lg:mt-16">
+          {/* Contoh: <button>Hubungi Kami</button> */}
         </div>
       </div>
     </section>

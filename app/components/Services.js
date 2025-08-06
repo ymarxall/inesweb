@@ -1,27 +1,10 @@
+'use client';
 export default function Services() {
   return (
-    <section id="services" className="py-8 sm:py-12 lg:py-20 bg-gradient-to-br from-green-50 via-white to-blue-50 relative overflow-hidden">
-      {/* Background decorative elements - optimized for mobile */}
-      <div className="absolute inset-0 opacity-20 sm:opacity-30">
-        <div className="absolute -top-16 -left-16 sm:-top-32 sm:-left-32 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-to-r from-green-200 to-transparent rounded-full blur-2xl sm:blur-3xl"></div>
-        <div className="absolute -bottom-16 -right-16 sm:-bottom-32 sm:-right-32 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-to-l from-blue-200 to-transparent rounded-full blur-2xl sm:blur-3xl"></div>
-      </div>
-      
-      {/* Fade background image - mobile optimized */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <img 
-          src="/pudar.png" 
-          alt="Background fade effect" 
-          className="w-full h-full object-cover opacity-10 sm:opacity-20 lg:opacity-30"
-        />
-      </div>
-
+    <section id="services" className="py-8 sm:py-12 lg:py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header - mobile first approach */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          {/* Badge */}
-          
-          
           {/* Title */}
           <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 px-2">
             Solusi yang <span className="text-green-600">Diberikan</span>
@@ -34,7 +17,6 @@ export default function Services() {
           
           {/* CTA Button - mobile centered */}
           <div className="lg:absolute lg:top-0 lg:right-0 flex justify-center lg:justify-end">
-         
           </div>
         </div>
 
@@ -70,7 +52,6 @@ export default function Services() {
                 {/* Features */}
                 <div className="pt-2 sm:pt-4 space-y-1 sm:space-y-2">
                   <div className="flex items-center justify-center text-xs text-gray-500">
-                   
                   </div>
                 </div>
               </div>
@@ -106,7 +87,6 @@ export default function Services() {
                 {/* Features */}
                 <div className="pt-2 sm:pt-4 space-y-1 sm:space-y-2">
                   <div className="flex items-center justify-center text-xs text-gray-500">
-                  
                   </div>
                 </div>
               </div>
@@ -142,16 +122,12 @@ export default function Services() {
                 {/* Features */}
                 <div className="pt-2 sm:pt-4 space-y-1 sm:space-y-2">
                   <div className="flex items-center justify-center text-xs text-gray-500">
-                   
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-      
-        
       </div>
     </section>
   );

@@ -2,7 +2,6 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
-import Desa from './components/Desa'
 import Gabung from './components/gabung'  
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
@@ -13,9 +12,8 @@ export default function Home() {
     <div>
       <Header />
       <Hero />
-      <About />
       <Services />
-      <Desa />
+       <About />
       <Gabung />   
       <FAQ />
       <Contact />
