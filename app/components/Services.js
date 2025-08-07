@@ -1,7 +1,7 @@
 'use client';
 export default function Services() {
   return (
-    <section id="services" className="py-8 sm:py-12 lg:py-20 bg-white relative overflow-hidden">
+    <section id="about" className="py-8 sm:py-12 lg:py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header - mobile first approach */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">

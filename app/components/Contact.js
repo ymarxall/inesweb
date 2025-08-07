@@ -1,7 +1,7 @@
 // components/Contact.js
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section  className="py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Judul */}
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">Hubungi Kami</h2>

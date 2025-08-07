@@ -66,8 +66,8 @@ export default function Footer() {
             <a href="#desa-digital" className="text-white text-lg font-medium hover:text-green-200 transition-colors duration-300">
               Desa Digital
             </a>
-            <a href="#publikasi" className="text-white text-lg font-medium hover:text-green-200 transition-colors duration-300">
-              Publikasi
+            <a href="#blog" className="text-white text-lg font-medium hover:text-green-200 transition-colors duration-300">
+              Blog
             </a>
           </div>
 
@@ -82,8 +82,8 @@ export default function Footer() {
             <a href="#desa-digital" className="text-white text-base font-medium hover:text-green-200 transition-colors duration-300 text-center bg-white bg-opacity-10 py-3 px-4 rounded-xl">
               Desa Digital
             </a>
-            <a href="#publikasi" className="text-white text-base font-medium hover:text-green-200 transition-colors duration-300 text-center bg-white bg-opacity-10 py-3 px-4 rounded-xl">
-              Publikasi
+            <a href="#blog" className="text-white text-base font-medium hover:text-green-200 transition-colors duration-300 text-center bg-white bg-opacity-10 py-3 px-4 rounded-xl">
+              Blog
             </a>
           </div>
         </div>

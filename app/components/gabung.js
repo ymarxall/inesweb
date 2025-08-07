@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Gabung() {
   return (
-    <section className="py-16 bg-white text-center">
+    <section id="desa" className="py-16 bg-white text-center">
       {/* Judul */}
       <div className="container mx-auto px-4 mb-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-2">

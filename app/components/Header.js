@@ -56,24 +56,24 @@ export default function Header() {
             >
               Upaya
             </Link>
-            <Link
-              href="#services"
+            <Link 
+              href="#desa"
               className="font-medium text-green-800 hover:text-green-900 transition-colors duration-200 text-base"
             >
               Desa Digital
             </Link>
             <Link
-              href="#contact"
+              href="/blog"
               className="font-medium text-green-800 hover:text-green-900 transition-colors duration-200 text-base"
             >
-              Publikasi
+              Blog
             </Link>
           </nav>
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex flex-shrink-0">
             <Link
-              href="#contact"
+              href="/blog"
               className="font-semibold text-white bg-green-600 hover:bg-green-700 px-6 py-2.5 rounded-lg transition-all duration-300 text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               Hubungi Kami
@@ -161,24 +161,24 @@ export default function Header() {
                 Upaya
               </Link>
               <Link
-                href="#services"
+                href="#desa"
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
                 onClick={closeMenu}
               >
                 Desa Digital
               </Link>
               <Link
-                href="#contact"
+                href="/blog"
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
                 onClick={closeMenu}
               >
-                Publikasi
+                Blog
               </Link>
               
               {/* Mobile CTA Button */}
               <div className="pt-6 mt-6 border-t border-gray-100">
                 <Link
-                  href="#contact"
+                  href="/blog"
                   className="block w-full font-semibold text-center text-white bg-green-600 hover:bg-green-700 px-6 py-4 rounded-lg transition-colors duration-300 text-lg shadow-md"
                   onClick={closeMenu}
                 >

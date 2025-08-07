@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" 
+    <section  
     className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
@@ -113,7 +113,7 @@ export default function About() {
 
               <div className="pt-4">
                 <a 
-                  href="#contact" 
+                  href="#blog" 
                   className="inline-flex items-center text-lg font-semibold text-green-600 hover:text-green-700 group transition-colors duration-300"
                 >
                   <span>Lihat Unggulan Lainnya</span>

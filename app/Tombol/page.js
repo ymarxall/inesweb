@@ -129,7 +129,7 @@ function TombolHeader() {
               href="/"
               className="font-medium text-green-800 hover:text-green-900 transition-colors duration-200 text-base"
             >
-              Publikasi
+              Blog
             </Link>
           </nav>
 
@@ -235,7 +235,7 @@ function TombolHeader() {
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
                 onClick={closeMenu}
               >
-                Publikasi
+                Blog
               </Link>
               
               {/* Mobile CTA Button */}
