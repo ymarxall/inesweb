@@ -1,23 +1,34 @@
 export default function About() {
   return (
-    <section  
-    className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Keunggulan <span className="text-green-600">inesa.id</span>
+    <section className="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-green-100 rounded-full opacity-30 animate-pulse"></div>
+      <div className="absolute top-32 right-16 w-32 h-32 bg-green-50 rounded-full opacity-40 animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-green-100 rounded-full opacity-25 animate-pulse delay-500"></div>
+      <div className="absolute bottom-32 right-1/3 w-16 h-16 bg-green-200 rounded-full opacity-20 animate-pulse delay-700"></div>
+
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        {/* Header Section */}
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16 mx-4 sm:mx-6 lg:mx-8">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500 rounded-2xl mb-4 shadow-lg shadow-green-500/25">
+            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+            Keunggulan <span className="text-green-500">inesa.id</span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Inesa membantu desa mengelola data secara digital dan transparan, agar pelayanan publik lebih efisien dan akuntabel.
+          <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
+            Inesa adalah solusi digital terpadu untuk desa, membantu mengelola administrasi, keuangan, dan pelayanan publik secara efisien, transparan, dan modern.
           </p>
         </div>
 
         {/* Mobile Image - Show only on mobile, right after description */}
-        <div className="lg:hidden mb-8">
-          <div className="relative max-w-xs mx-auto">
+        <div className="lg:hidden mb-8 sm:mb-12 mx-4 sm:mx-6 lg:mx-8">
+          <div className="relative max-w-[280px] mx-auto">
             {/* Background decorative elements for mobile */}
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-green-100 rounded-full opacity-30 animate-pulse"></div>
-            <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-blue-100 rounded-full opacity-40"></div>
+            <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-green-200 rounded-full opacity-40 animate-pulse"></div>
             
             <img
               src="/putus.png"
@@ -30,13 +41,13 @@ export default function About() {
               <img
                 src="/rocket.png"
                 alt="Digital transformation illustration"
-                className="w-full max-w-xs mx-auto h-auto drop-shadow-2xl"
+                className="w-full max-w-[280px] mx-auto h-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>
             
-            <div className="absolute top-2 right-2 bg-white rounded-full px-3 py-1 shadow-lg transform rotate-12 transition-transform duration-300">
-              <div className="flex items-center text-xs font-semibold text-green-600">
+            <div className="absolute top-2 right-2 bg-white rounded-full px-3 py-1 shadow-lg transform rotate-12 transition-transform duration-300 hover:scale-110">
+              <div className="flex items-center text-xs font-semibold text-green-500">
                 <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                 Digital First
               </div>
@@ -44,13 +55,13 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 overflow-x-hidden">
+        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12 mx-4 sm:mx-6 lg:mx-8">
           {/* Desktop Image Section - Hidden on mobile */}
           <div className="hidden lg:block w-full lg:w-1/2">
             <div className="relative max-w-md mx-auto lg:mx-0">
               {/* Background decorative elements */}
               <div className="absolute -top-8 -right-8 w-24 sm:w-32 h-24 sm:h-32 bg-green-100 rounded-full opacity-30 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 sm:w-24 h-16 sm:h-24 bg-blue-100 rounded-full opacity-40"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 sm:w-24 h-16 sm:h-24 bg-green-200 rounded-full opacity-40 animate-pulse"></div>
               
               <img
                 src="/putus.png"
@@ -63,13 +74,13 @@ export default function About() {
                 <img
                   src="/rocket.png"
                   alt="Digital transformation illustration"
-                  className="w-full max-w-xs sm:max-w-sm mx-auto h-auto drop-shadow-2xl"
+                  className="w-full max-w-xs sm:max-w-md mx-auto h-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                 />
               </div>
               
-              <div className="absolute top-4 right-4 bg-white rounded-full px-4 py-2 shadow-lg transform rotate-12 transition-transform duration-300">
-                <div className="flex items-center text-xs font-semibold text-green-600">
+              <div className="absolute top-4 right-4 bg-white rounded-full px-4 py-2 shadow-lg transform rotate-12 transition-transform duration-300 hover:scale-110">
+                <div className="flex items-center text-xs font-semibold text-green-500">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                   Digital First
                 </div>
@@ -79,80 +90,71 @@ export default function About() {
 
           {/* Content Section */}
           <div className="w-full lg:w-1/2">
-            <div className="space-y-6">
-              <div className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-100 hover:border-green-200 transition-all duration-300 transform hover:-translate-y-1">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="group bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl border-2 border-gray-100 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors duration-300">
-                    <img 
-                      src="/pesawat.png" 
-                      alt="Digital mail system" 
-                      className="w-6 h-6 object-contain"
-                      loading="lazy"
-                    />
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-500 transition-colors duration-300">
+                    <svg className="w-6 h-6 text-green-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors duration-300">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 group-hover:text-green-500 transition-colors duration-300">
                       Sistem Persuratan Digital Terpadu
                     </h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      Kelola surat-menyurat desa dengan cepat, akurat, dan efisien melalui platform digital yang terintegrasi.
+                      Sederhanakan proses surat-menyurat desa dengan platform digital yang cepat, akurat, dan terintegrasi, menghemat waktu dan meningkatkan efisiensi.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-100 hover:border-green-200 transition-all duration-300 transform hover:-translate-y-1">
+              <div className="group bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl border-2 border-gray-100 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-300">
-                    <img 
-                      src="/gedung.png" 
-                      alt="Professional templates" 
-                      className="w-7 h-7 object-contain"
-                      loading="lazy"
-                    />
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-500 transition-colors duration-300">
+                    <svg className="w-6 h-6 text-green-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 group-hover:text-green-500 transition-colors duration-300">
                       Template Dokumen Profesional
                     </h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      Beragam template surat yang sesuai kebutuhan, mempermudah tugas administrasi sehari-hari dengan standar profesional.
+                      Akses berbagai template dokumen siap pakai yang dirancang untuk memenuhi standar administrasi desa, mempermudah pembuatan surat resmi.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-100 hover:border-green-200 transition-all duration-300 transform hover:-translate-y-1">
+              <div className="group bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl border-2 border-gray-100 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center group-hover:bg-purple-200 transition-colors duration-300">
-                    <img 
-                      src="/koper.png" 
-                      alt="Cloud storage security" 
-                      className="w-7 h-7 object-contain"
-                      loading="lazy"
-                    />
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-500 transition-colors duration-300">
+                    <svg className="w-6 h-6 text-green-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                    </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 group-hover:text-green-500 transition-colors duration-300">
                       Cloud Storage yang Aman
                     </h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      Dokumen desa tersimpan aman dalam sistem cloud terenkripsi, akses kapan saja dan dari mana saja dengan keamanan terjamin.
+                      Simpan semua dokumen desa di cloud dengan enkripsi tingkat tinggi, memastikan keamanan data dan akses mudah kapan saja, di mana saja.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4">
-                <a 
-                  href="#blog" 
-                  className="inline-flex items-center text-lg font-semibold text-green-600 hover:text-green-700 group transition-colors duration-300"
+              <div className="pt-4 sm:pt-6">
+                <a
+                  href="/blog"
+                  className="inline-flex items-center text-base sm:text-lg font-semibold text-green-500 hover:text-green-600 group transition-colors duration-300"
                 >
                   <span>Lihat Unggulan Lainnya</span>
-                  <svg 
-                    className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />

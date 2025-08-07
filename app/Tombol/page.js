@@ -430,9 +430,6 @@ export default function Tombol() {
                             <span className={`inline-block ${colorClasses[step.color].light} ${colorClasses[step.color].text} text-sm font-semibold px-4 py-2 rounded-full`}>
                               {step.phase}
                             </span>
-                            <span className={`inline-block ${colorClasses[step.color].light} ${colorClasses[step.color].text} text-sm font-semibold px-4 py-2 rounded-full`}>
-                              {step.duration}
-                            </span>
                           </div>
                           <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">{step.title}</h3>
                           <p className="text-gray-600 text-lg leading-relaxed">{step.description}</p>

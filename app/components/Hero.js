@@ -7,14 +7,12 @@ export default function Hero() {
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-r from-green-50/30 to-transparent pointer-events-none" />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mx-4 sm:mx-6 lg:mx-8">
           
           {/* Text Content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1">
-            <div className="max-w-2xl mx-auto lg:mx-0">
-              {/* Badge */}
-        
+            <div className="max-w-xl mx-auto lg:mx-0">
               {/* Main Heading */}
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight">
                 <span className="block">Digitalisasi Desa,</span>
@@ -23,7 +21,7 @@ export default function Hero() {
               </h1>
               
               {/* Description */}
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Permudah administrasi desa melalui platform digital cerdas yang aman dan terpercaya. 
                 <span className="font-semibold text-green-700"> inesa.id</span> hadir untuk membawa kemajuan nyata bagi desa Anda.
               </p>
@@ -39,15 +37,13 @@ export default function Hero() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </a>
-                
-                
               </div>
             </div>
           </div>
           
           {/* Image Content */}
           <div className="w-full lg:w-1/2 order-1 lg:order-2 relative">
-            <div className="relative max-w-lg mx-auto">
+            <div className="relative max-w-md sm:max-w-lg mx-auto">
               {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/20 rounded-full opacity-60 animate-pulse"></div>
               <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/15 rounded-full opacity-50 animate-pulse delay-1000"></div>
@@ -62,17 +58,19 @@ export default function Hero() {
                     transform: 'scale(1.1) translateY(-10px)',
                     filter: 'drop-shadow(0 10px 30px rgba(255, 255, 255, 0.2))'
                   }}
+                  loading="lazy"
                 />
                 
                 {/* Main Image */}
                 <img
                   src="/kanan.png"
                   alt="Digital village transformation"
-                  className="relative w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto h-auto z-10 transform hover:scale-105 transition-transform duration-500"
+                  className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto h-auto z-10 transform hover:scale-105 transition-transform duration-500"
                   style={{ 
                     filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1))',
                     objectFit: 'contain'
                   }}
+                  loading="lazy"
                 />
               </div>
               
