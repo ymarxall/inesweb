@@ -3,7 +3,7 @@ export default function About() {
     <section  
     className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
+        <div className="text-center mb-8 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Keunggulan <span className="text-green-600">inesa.id</span>
           </h2>
@@ -12,13 +12,45 @@ export default function About() {
           </p>
         </div>
 
+        {/* Mobile Image - Show only on mobile, right after description */}
+        <div className="lg:hidden mb-8">
+          <div className="relative max-w-xs mx-auto">
+            {/* Background decorative elements for mobile */}
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-green-100 rounded-full opacity-30 animate-pulse"></div>
+            <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-blue-100 rounded-full opacity-40"></div>
+            
+            <img
+              src="/putus.png"
+              alt="Decorative dashed line"
+              className="absolute inset-0 w-full h-full object-contain opacity-20 z-0"
+              loading="lazy"
+            />
+            
+            <div className="relative z-10">
+              <img
+                src="/rocket.png"
+                alt="Digital transformation illustration"
+                className="w-full max-w-xs mx-auto h-auto drop-shadow-2xl"
+                loading="lazy"
+              />
+            </div>
+            
+            <div className="absolute top-2 right-2 bg-white rounded-full px-3 py-1 shadow-lg transform rotate-12 transition-transform duration-300">
+              <div className="flex items-center text-xs font-semibold text-green-600">
+                <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+                Digital First
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 overflow-x-hidden">
-          {/* Image Section */}
-          <div className="w-full lg:w-1/2 order-2 lg:order-1">
+          {/* Desktop Image Section - Hidden on mobile */}
+          <div className="hidden lg:block w-full lg:w-1/2">
             <div className="relative max-w-md mx-auto lg:mx-0">
               {/* Background decorative elements */}
-              <div className="absolute -top-8 -right-8 w-24 sm:w-32 h-24 sm:h-32 bg-green-100 rounded-full opacity-30 animate-pulse hidden sm:block"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 sm:w-24 h-16 sm:h-24 bg-blue-100 rounded-full opacity-40 hidden sm:block"></div>
+              <div className="absolute -top-8 -right-8 w-24 sm:w-32 h-24 sm:h-32 bg-green-100 rounded-full opacity-30 animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 sm:w-24 h-16 sm:h-24 bg-blue-100 rounded-full opacity-40"></div>
               
               <img
                 src="/putus.png"
@@ -36,7 +68,7 @@ export default function About() {
                 />
               </div>
               
-              <div className="absolute top-4 right-4 bg-white rounded-full px-4 py-2 shadow-lg transform rotate-12 transition-transform duration-300 hidden sm:block">
+              <div className="absolute top-4 right-4 bg-white rounded-full px-4 py-2 shadow-lg transform rotate-12 transition-transform duration-300">
                 <div className="flex items-center text-xs font-semibold text-green-600">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                   Digital First
@@ -46,7 +78,7 @@ export default function About() {
           </div>
 
           {/* Content Section */}
-          <div className="w-full lg:w-1/2 order-1 lg:order-2">
+          <div className="w-full lg:w-1/2">
             <div className="space-y-6">
               <div className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-100 hover:border-green-200 transition-all duration-300 transform hover:-translate-y-1">
                 <div className="flex items-start space-x-4">

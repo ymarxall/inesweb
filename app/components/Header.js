@@ -73,7 +73,7 @@ export default function Header() {
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex flex-shrink-0">
             <Link
-              href="/blog"
+              href="#contact"
               className="font-semibold text-white bg-green-600 hover:bg-green-700 px-6 py-2.5 rounded-lg transition-all duration-300 text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               Hubungi Kami
