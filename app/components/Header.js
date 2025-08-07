@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
@@ -31,19 +31,19 @@ export default function Header() {
             : 'bg-gradient-to-b from-green-50/80 to-transparent backdrop-blur-sm'
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 py-3 flex items-center justify-between max-w-full">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-3 flex items-center justify-between max-w-full mx-4 sm:mx-6 lg:mx-8">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <img 
               src="/green.png" 
               alt="Logo Inesa" 
-              className="h-8 w-auto sm:h-9"
+              className="h-8 w-auto sm:h-9 lg:h-10"
               loading="lazy"
             />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 mx-auto">
+          <nav className="hidden lg:flex items-center space-x-6 mx-auto">
             <Link
               href="#home"
               className="font-medium text-green-800 hover:text-green-900 transition-colors duration-200 text-base"
@@ -74,7 +74,7 @@ export default function Header() {
           <div className="hidden lg:flex flex-shrink-0">
             <Link
               href="#contact"
-              className="font-semibold text-white bg-green-600 hover:bg-green-700 px-6 py-2.5 rounded-lg transition-all duration-300 text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              className="font-semibold text-white bg-green-600 hover:bg-green-700 px-5 py-2 sm:px-6 sm:py-2.5 rounded-lg transition-all duration-300 text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               Hubungi Kami
             </Link>
@@ -86,7 +86,6 @@ export default function Header() {
             onClick={toggleMenu}
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
-            style={{ marginRight: '-8px' }}
           >
             <svg
               className="w-6 h-6"
@@ -124,7 +123,7 @@ export default function Header() {
           />
           
           {/* Mobile Menu */}
-          <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out overflow-x-hidden" style={{ maxWidth: '100vw' }}>
+          <div className="fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out overflow-x-hidden">
             {/* Menu Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-100">
               <img 
@@ -178,8 +177,8 @@ export default function Header() {
               {/* Mobile CTA Button */}
               <div className="pt-6 mt-6 border-t border-gray-100">
                 <Link
-                  href="/blog"
-                  className="block w-full font-semibold text-center text-white bg-green-600 hover:bg-green-700 px-6 py-4 rounded-lg transition-colors duration-300 text-lg shadow-md"
+                  href="#contact"
+                  className="block w-full font-semibold text-center text-white bg-green-600 hover:bg-green-700 px-5 py-3 sm:px-6 sm:py-4 rounded-lg transition-colors duration-200 text-lg shadow-md"
                   onClick={closeMenu}
                 >
                   Hubungi Kami
