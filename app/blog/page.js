@@ -302,8 +302,8 @@ export default function BlogArticlePage() {
                   </div>
                   <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 border border-green-100">
                     <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-                      Desa Bontomanai merupakan salah satu desa di Kecamatan Mangarabombang, 
-                      Kabupaten Takalar, Sulawesi Selatan yang memiliki karakteristik geografis dataran 
+                      Desa Bontomanai merupakan salah satu desa di Kecamatan Rumbia, 
+                      Kabupaten Jeneponto, Sulawesi Selatan yang memiliki karakteristik geografis dataran 
                       rendah, dengan mayoritas penduduk bermata pencaharian di sektor pertanian dan 
                       perkebunan.
                     </p>
