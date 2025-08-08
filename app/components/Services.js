@@ -1,17 +1,29 @@
 'use client';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function Services() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
   return (
-    <section id="about" className="py-8 sm:py-12 lg:py-20 bg-white relative overflow-hidden">
+    <section id="services" className="py-8 sm:py-12 lg:py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         {/* Section Header - mobile first approach */}
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16" data-aos="fade-up" data-aos-delay="100">
           {/* Title */}
-          <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 px-4 sm:px-0">
+          <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 px-4 sm:px-0" data-aos="fade-up" data-aos-delay="200">
             Solusi yang <span className="text-green-600">Diberikan</span>
           </h2>
           
           {/* Description */}
-          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8 lg:mb-0">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8 lg:mb-0" data-aos="fade-up" data-aos-delay="300">
             Platform digital lengkap untuk transformasi administrasi desa modern
           </p>
           
@@ -24,10 +36,10 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mx-4 sm:mx-6 lg:mx-8">
           
           {/* Service Card 1 */}
-          <div className="group bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-200 transition-all duration-300 sm:duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
+          <div className="group bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-200 transition-all duration-300 sm:duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
             <div className="flex flex-col items-center text-center">
               {/* Icon Container - mobile optimized sizes */}
-              <div className="relative mb-4 sm:mb-6 transform group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300 sm:duration-500">
+              <div className="relative mb-4 sm:mb-6 transform group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300 sm:duration-500" data-aos="fade-up" data-aos-delay="500">
                 <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-full opacity-15 group-hover:opacity-25 sm:group-hover:opacity-30 blur-md sm:blur-lg transition-opacity duration-300 sm:duration-500"></div>
                 <img 
                   src="/a1.png" 
@@ -43,10 +55,10 @@ export default function Services() {
               
               {/* Content */}
               <div className="space-y-2 sm:space-y-4">
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors duration-300 leading-tight">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors duration-300 leading-tight" data-aos="fade-up" data-aos-delay="600">
                   Layanan Surat Menyurat Online
                 </h3>
-                <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="700">
                   Mempermudah proses pengajuan surat menyurat tanpa harus datang ke kantor desa. Sistem terintegrasi dan user-friendly.
                 </p>
                 
@@ -60,10 +72,10 @@ export default function Services() {
           </div>
 
           {/* Service Card 2 */}
-          <div className="group bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl border border-gray-100 hover:border-blue-200 transition-all duration-300 sm:duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
+          <div className="group bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl border border-gray-100 hover:border-blue-200 transition-all duration-300 sm:duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2" data-aos="fade-up" data-aos-delay="800">
             <div className="flex flex-col items-center text-center">
               {/* Icon Container */}
-              <div className="relative mb-4 sm:mb-6 transform group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300 sm:duration-500">
+              <div className="relative mb-4 sm:mb-6 transform group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300 sm:duration-500" data-aos="fade-up" data-aos-delay="900">
                 <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-15 group-hover:opacity-25 sm:group-hover:opacity-30 blur-md sm:blur-lg transition-opacity duration-300 sm:duration-500"></div>
                 <img 
                   src="/a2.png" 
@@ -79,10 +91,10 @@ export default function Services() {
               
               {/* Content */}
               <div className="space-y-2 sm:space-y-4">
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300 leading-tight" data-aos="fade-up" data-aos-delay="1000">
                   Sistem Informasi Kependudukan
                 </h3>
-                <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="1100">
                   Simpan data kependudukan dengan mudah dan akurat, memberikan laporan cepat dan mudah diakses kapan saja.
                 </p>
                 
@@ -96,10 +108,10 @@ export default function Services() {
           </div>
 
           {/* Service Card 3 */}
-          <div className="group bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl border border-gray-100 hover:border-purple-200 transition-all duration-300 sm:duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2 md:col-span-2 xl:col-span-1">
+          <div className="group bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl border border-gray-100 hover:border-purple-200 transition-all duration-300 sm:duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2 md:col-span-2 xl:col-span-1" data-aos="fade-up" data-aos-delay="1200">
             <div className="flex flex-col items-center text-center">
               {/* Icon Container */}
-              <div className="relative mb-4 sm:mb-6 transform group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300 sm:duration-500">
+              <div className="relative mb-4 sm:mb-6 transform group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300 sm:duration-500" data-aos="fade-up" data-aos-delay="1300">
                 <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-15 group-hover:opacity-25 sm:group-hover:opacity-30 blur-md sm:blur-lg transition-opacity duration-300 sm:duration-500"></div>
                 <img 
                   src="/a3.png" 
@@ -115,10 +127,10 @@ export default function Services() {
               
               {/* Content */}
               <div className="space-y-2 sm:space-y-4">
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300 leading-tight">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300 leading-tight" data-aos="fade-up" data-aos-delay="1400">
                   Dashboard Keuangan Desa
                 </h3>
-                <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="1500">
                   Kelola APBDes, realisasi anggaran, dan laporan keuangan hanya dalam beberapa klik dengan visualisasi yang jelas.
                 </p>
                 

@@ -51,16 +51,16 @@ export default function Header() {
               Beranda
             </Link>
             <Link
-              href="#about"
+              href="#services"
               className="font-medium text-green-800 hover:text-green-900 transition-colors duration-200 text-base"
             >
               Upaya
             </Link>
             <Link 
-              href="#desa"
+              href="/#mitra"
               className="font-medium text-green-800 hover:text-green-900 transition-colors duration-200 text-base"
             >
-              Desa Digital
+              Mitra
             </Link>
             <Link
               href="/blog"
@@ -153,18 +153,18 @@ export default function Header() {
                 Beranda
               </Link>
               <Link
-                href="#about"
+                href="#services"
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
                 onClick={closeMenu}
               >
                 Upaya
               </Link>
               <Link
-                href="#desa"
+                href="#mitra"
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
                 onClick={closeMenu}
               >
-                Desa Digital
+                Mitra
               </Link>
               <Link
                 href="/blog"

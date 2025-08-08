@@ -123,7 +123,7 @@ function TombolHeader() {
               href="/"
               className="font-medium text-green-800 hover:text-green-900 transition-colors duration-200 text-base"
             >
-              Desa Digital
+              Mitra
             </Link>
             <Link
               href="/"
@@ -136,7 +136,7 @@ function TombolHeader() {
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex flex-shrink-0">
             <Link
-              href="/contact"
+              href="#contact"
               className="font-semibold text-white bg-green-600 hover:bg-green-700 px-6 py-2.5 rounded-lg transition-all duration-300 text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               Hubungi Kami
@@ -228,7 +228,7 @@ function TombolHeader() {
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
                 onClick={closeMenu}
               >
-                Desa Digital
+                Mitra
               </Link>
               <Link
                 href="/"
