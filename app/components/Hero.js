@@ -15,14 +15,14 @@ export default function Hero() {
             <div className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl mx-auto lg:mx-0">
               {/* Main Heading */}
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-extrabold text-gray-900 mb-4 sm:mb-5 md:mb-6 lg:mb-8 xl:mb-10 2xl:mb-12 leading-tight">
-                <span className="block">Digitalisasi Desa,</span>
+                <span className="block">Transformasi Desa,</span>
                 <span className="block text-green-600">Menuju Masa Depan</span>
                 <span className="block">yang Transparan</span>
               </h1>
               
               {/* Description */}
               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-600 mb-6 sm:mb-7 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14 leading-relaxed max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl mx-auto lg:mx-0">
-                Permudah administrasi desa melalui platform digital cerdas yang aman dan terpercaya. 
+                Permudah administrasi desa melalui platform teknologi cerdas yang aman dan terpercaya. 
                 <span className="font-semibold text-green-700"> inesa.id</span> hadir untuk membawa kemajuan nyata bagi desa Anda.
               </p>
               
@@ -64,7 +64,7 @@ export default function Hero() {
                 {/* Main Image */}
                 <img
                   src="/kanan.png"
-                  alt="Digital village transformation"
+                  alt="Transformasi desa modern"
                   className="relative w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[85%] xl:max-w-[80%] 2xl:max-w-[75%] mx-auto h-auto z-10 transform hover:scale-105 transition-transform duration-500"
                   style={{ 
                     filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1))',
@@ -78,7 +78,7 @@ export default function Hero() {
               <div className="absolute top-1/4 -left-3 sm:-left-4 md:-left-5 lg:-left-6 xl:-left-7 2xl:-left-8 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 sm:p-2.5 md:p-3 lg:p-3.5 xl:p-4 2xl:p-4.5 transform rotate-12 hover:rotate-0 transition-transform duration-300">
                 <div className="flex items-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
                   <div className="w-2 sm:w-2.5 md:w-3 lg:w-3.5 xl:w-4 2xl:w-4.5 h-2 sm:h-2.5 md:h-3 lg:h-3.5 xl:h-4 2xl:h-4.5 bg-green-500 rounded-full mr-2 sm:mr-2.5 md:mr-3"></div>
-                  <span className="font-medium">Digital</span>
+                  <span className="font-medium">Inovatif</span>
                 </div>
               </div>
               
