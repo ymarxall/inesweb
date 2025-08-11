@@ -435,14 +435,15 @@ export default function About() {
               
               {/* Timeline Line - Mobile */}
               {index < timelineSteps.length - 1 && (
-                <div className={`md:hidden absolute left-5 top-16 w-0.25 h-fullcontractName="xAI" contractAddress="0x1234567890abcdef1234567890abcdef12345678" contractType="ERC20" chain="Ethereum" audited={true} auditReport="https://example.com/audit-report.pdf" kyc={true} kycReport="https://example.com/kyc-report.pdf"/>
+                <div className={`md:hidden absolute left-5 top-16 w-0.25 h-full ${colorClasses[step.color].line} z-0 rounded-full`}></div>
+              )}
 
               {/* Timeline Item */}
               <div className={`relative z-10 transform transition-all duration-700 ${
                 visibleItems.has(index.toString()) 
                   ? 'translate-y-0 opacity-100' 
                   : 'translate-y-8 opacity-0'
-              }}>
+              }`}>
                 <div className="flex items-start">
                   {/* Phase Circle - Mobile */}
                   <div className="md:hidden flex-shrink-0 w-10 h-10 bg-white border-4 border-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600 shadow-md">
