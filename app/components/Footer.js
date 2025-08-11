@@ -126,10 +126,10 @@ export default function Footer() {
                   Instagram
                 </a>
                 <a 
-                  href="https://www.tiktok.com/@coconut_computer_club" 
+                  href="#" 
                   className="text-white text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg font-medium hover:text-green-200 transition-colors duration-300"
                 >
-                  TikTok
+                  LinkedIn
                 </a>
               </div>
 

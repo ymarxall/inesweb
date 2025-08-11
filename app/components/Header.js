@@ -45,13 +45,13 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 mx-auto">
             <Link
-              href="#home"
+              href="/#home"
               className="font-medium text-green-800 hover:text-green-900 transition-colors duration-200 text-base"
             >
               Beranda
             </Link>
             <Link
-              href="#services"
+              href="/#services"
               className="font-medium text-green-800 hover:text-green-900 transition-colors duration-200 text-base"
             >
               Upaya
@@ -73,7 +73,7 @@ export default function Header() {
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex flex-shrink-0">
             <Link
-              href="#contact"
+              href="/#contact"
               className="font-semibold text-white bg-green-600 hover:bg-green-700 px-5 py-2 sm:px-6 sm:py-2.5 rounded-lg transition-all duration-300 text-base shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               Hubungi Kami
@@ -146,21 +146,21 @@ export default function Header() {
             {/* Menu Items */}
             <nav className="flex flex-col p-6 space-y-1">
               <Link
-                href="#home"
+                href="/#home"
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
                 onClick={closeMenu}
               >
                 Beranda
               </Link>
               <Link
-                href="#services"
+                href="/#services"
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
                 onClick={closeMenu}
               >
                 Upaya
               </Link>
               <Link
-                href="#mitra"
+                href="/#mitra"
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
                 onClick={closeMenu}
               >
@@ -177,7 +177,7 @@ export default function Header() {
               {/* Mobile CTA Button */}
               <div className="pt-6 mt-6 border-t border-gray-100">
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="block w-full font-semibold text-center text-white bg-green-600 hover:bg-green-700 px-5 py-3 sm:px-6 sm:py-4 rounded-lg transition-colors duration-200 text-lg shadow-md"
                   onClick={closeMenu}
                 >

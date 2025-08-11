@@ -1,9 +1,10 @@
 'use client'
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function About() {
+  const [visibleItems, setVisibleItems] = useState(new Set());
+
   useEffect(() => {
-    // Simple fade-in animation for elements
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -14,15 +15,101 @@ export default function About() {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
+          if (entry.target.dataset.index) {
+            setVisibleItems(prev => new Set([...prev, entry.target.dataset.index]));
+          }
         }
       });
     }, observerOptions);
 
-    const elements = document.querySelectorAll('.fade-in');
+    const elements = document.querySelectorAll('.fade-in, [data-timeline-item]');
     elements.forEach(el => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
+
+  const timelineSteps = [
+    {
+      phase: "Fase 1",
+      title: "Riset Pendahuluan",
+      description: "Melakukan studi literatur dan observasi lapangan untuk memahami kebutuhan desa",
+      icon: "📚",
+      color: "green",
+      duration: "1-2 Bulan",
+      items: [
+        "Studi literatur teknologi terkini dan praktik terbaik",
+        "Observasi lapangan di desa",
+        "Wawancara dengan pemangku kepentingan",
+        "Identifikasi masalah utama dan peluang"
+      ]
+    },
+    {
+      phase: "Fase 2",
+      title: "Pengumpulan Data",
+      description: "Menggali tantangan spesifik melalui survei dan diskusi kelompok",
+      icon: "📊",
+      color: "green",
+      duration: "2-3 Bulan",
+      items: [
+        "Survei kebutuhan masyarakat dengan kuesioner digital",
+        "Focus Group Discussion (FGD) dengan kelompok tani",
+        "Wawancara mendalam dengan pemerintah desa",
+        "Analisis data kuantitatif dan kualitatif"
+      ]
+    },
+    {
+      phase: "Fase 3",
+      title: "Penyusunan Konsep",
+      description: "Merancang solusi teknologi berdasarkan kebutuhan dan kemampuan lokal",
+      icon: "🛠️",
+      color: "green",
+      duration: "2-3 Bulan",
+      items: [
+        "Pemetaan solusi dengan matriks impact-feasibility",
+        "Pembuatan prototipe sederhana (mock-up)",
+        "Analisis prioritas solusi teknologi",
+        "Validasi konsep awal dengan tim desa"
+      ]
+    },
+    {
+      phase: "Fase 4",
+      title: "Penetapan Ide Final",
+      description: "Menyepakati solusi teknologi dengan masyarakat dan pihak terkait",
+      icon: "🤝",
+      color: "green",
+      duration: "1-2 Bulan",
+      items: [
+        "Presentasi konsep kepada masyarakat desa",
+        "Revisi konsep berdasarkan masukan",
+        "Penandatanganan MoU dengan pemangku kepentingan",
+        "Perencanaan implementasi terperinci"
+      ]
+    },
+    {
+      phase: "Fase 5",
+      title: "Eksekusi Langsung",
+      description: "Menerapkan solusi teknologi dengan pelibatan masyarakat",
+      icon: "🚀",
+      color: "green",
+      duration: "4-6 Bulan",
+      items: [
+        "Pembagian tim untuk IoT, infrastruktur, dan AI",
+        "Instalasi teknologi dengan pendekatan learning by doing",
+        "Pelatihan langsung untuk masyarakat",
+        "Monitoring awal implementasi"
+      ]
+    }
+  ];
+
+  const colorClasses = {
+    green: {
+      bg: "bg-green-500",
+      light: "bg-green-100",
+      text: "text-green-800",
+      line: "bg-green-300",
+      hover: "hover:bg-green-600"
+    }
+  };
 
   return (
     <section className="py-12 lg:py-16 bg-gradient-to-br from-white via-green-50/20 to-white relative overflow-hidden">
@@ -33,7 +120,7 @@ export default function About() {
 
       <div className="container mx-auto px-4 lg:px-12 relative z-10">
         {/* Compact Header */}
-        <div className="text-center mb-12 fade-in" style={{opacity: 0, transform: 'translateY(20px)', transition: 'all 0.6s ease'}}>
+        <div className="text-center fade-in" style={{opacity: 0, transform: 'translateY(20px)', transition: 'all 0.6s ease', marginBottom: '80px'}}>
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl mb-4 shadow-lg shadow-green-500/20">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -48,7 +135,7 @@ export default function About() {
         </div>
 
         {/* Problem Categories - Compact Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" style={{marginBottom: '80px'}}>
           {/* Pertanian */}
           <div className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg border border-gray-100 hover:border-green-300 transition-all duration-300 hover:-translate-y-1 fade-in" style={{opacity: 0, transform: 'translateY(20px)', transition: 'all 0.6s ease 0.1s'}}>
             <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:from-green-500 group-hover:to-emerald-500 transition-all duration-300">
@@ -237,7 +324,7 @@ export default function About() {
         </div>
 
         {/* Compact Core Principles */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center fade-in" style={{opacity: 0, transform: 'translateY(20px)', transition: 'all 0.6s ease 0.8s'}}>
+        <div className="grid lg:grid-cols-2 items-center fade-in" style={{opacity: 0, transform: 'translateY(20px)', transition: 'all 0.6s ease 0.8s', marginBottom: '80px'}}>
           <div>
             <h3 className="text-2xl font-bold text-gray-800 mb-5">
               Prinsip <span className="text-green-500">Teknologi Tepat Guna</span>
@@ -324,74 +411,98 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
 
-         {/* Additional Info Section */}
-        <div className="mt-12 sm:mt-16 lg:mt-20 text-center" data-aos="fade-up" data-aos-delay="1600">
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-6 sm:p-8 lg:p-10 max-w-6xl mx-auto">
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4" data-aos="fade-up" data-aos-delay="1700">
-              Pendekatan <span className="text-green-600">Berbasis Kebutuhan</span>
-            </h3>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-6" data-aos="fade-up" data-aos-delay="1800">
-              Setiap desa memiliki tantangan dan potensi yang unik. INESA hadir untuk mengidentifikasi permasalahan spesifik setiap desa, kemudian merancang dan mengimplementasikan solusi teknologi yang tepat sasaran dan berkelanjutan.
+        {/* Timeline Content */}
+        <div className="max-w-5xl mx-auto" style={{paddingTop: '32px', paddingBottom: '32px', opacity: 0, transform: 'translateY(20px)', transition: 'all 0.6s ease 1s'}} data-timeline-item>
+          <div className="text-center" style={{marginBottom: '32px'}}>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Roadmap INESA</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Proses menyeluruh untuk mengembangkan solusi teknologi berbasis kebutuhan desa
             </p>
-            
-            {/* Process Steps - 5 Steps */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 mt-8">
+          </div>
+
+          {timelineSteps.map((step, index) => (
+            <div 
+              key={index} 
+              className="relative mb-12 last:mb-0"
+              data-timeline-item
+              data-index={index}
+            >
+              {/* Timeline Line - Desktop */}
+              {index < timelineSteps.length - 1 && (
+                <div className={`hidden md:block absolute left-10 top-24 w-0.5 h-full ${colorClasses[step.color].line} z-0 rounded-full`}></div>
+              )}
               
-              {/* Step 1 - Riset Pendahuluan */}
-              <div className="text-center" data-aos="fade-up" data-aos-delay="1900">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold">1</span>
+              {/* Timeline Line - Mobile */}
+              {index < timelineSteps.length - 1 && (
+                <div className={`md:hidden absolute left-5 top-16 w-0.25 h-fullcontractName="xAI" contractAddress="0x1234567890abcdef1234567890abcdef12345678" contractType="ERC20" chain="Ethereum" audited={true} auditReport="https://example.com/audit-report.pdf" kyc={true} kycReport="https://example.com/kyc-report.pdf"/>
+
+              {/* Timeline Item */}
+              <div className={`relative z-10 transform transition-all duration-700 ${
+                visibleItems.has(index.toString()) 
+                  ? 'translate-y-0 opacity-100' 
+                  : 'translate-y-8 opacity-0'
+              }}>
+                <div className="flex items-start">
+                  {/* Phase Circle - Mobile */}
+                  <div className="md:hidden flex-shrink-0 w-10 h-10 bg-white border-4 border-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600 shadow-md">
+                    {index + 1}
+                  </div>
+                  
+                  {/* Phase Circle - Desktop */}
+                  <div className={`hidden md:flex flex-shrink-0 w-20 h-20 ${colorClasses[step.color].bg} ${colorClasses[step.color].hover} text-white rounded-full items-center justify-center font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-3xl`}>
+                    <span className="text-xl">{step.icon}</span>
+                  </div>
+                  
+                  {/* Content Card */}
+                  <div className="ml-4 md:ml-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 flex-1 border border-gray-100 hover:-translate-y-1">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                      <div>
+                        <div className="flex items-center gap-3 mb-3">
+                          <span className={`inline-block ${colorClasses[step.color].light} ${colorClasses[step.color].text} text-sm font-semibold px-4 py-2 rounded-full`}>
+                            {step.phase}
+                          </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-800 mb-3">{step.title}</h3>
+                        <p className="text-gray-600 text-base leading-relaxed">{step.description}</p>
+                      </div>
+                      
+                      <div className="hidden md:block text-5xl opacity-20">
+                        {step.icon}
+                      </div>
+                    </div>
+                    
+                    {/* Items Grid */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {step.items.map((item, itemIndex) => (
+                        <div key={itemIndex} className="flex items-start group">
+                          <div className={`w-1.5 h-1.5 ${colorClasses[step.color].bg} rounded-full mt-2.5 mr-4 flex-shrink-0 group-hover:scale-150 transition-transform duration-200`}></div>
+                          <span className="text-gray-700 text-base leading-relaxed group-hover:text-gray-900 transition-colors">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Progress Indicator */}
+                    <div className="mt-6 pt-6 border-t border-gray-100">
+                      <div className="flex items-center justify-between text-sm text-gray-500">
+                        <span>Kemajuan fase</span>
+                        <span>{index + 1}/5</span>
+                      </div>
+                      <div className="mt-2 w-full bg-gray-200 rounded-full h-1.5">
+                        <div 
+                          className={`${colorClasses[step.color].bg} h-1.5 rounded-full transition-all duration-1000 ease-out`}
+                          style={{ width: visibleItems.has(index.toString()) ? `${((index + 1) / 5) * 100}%` : '0%' }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Riset Pendahuluan</h4>
-                <p className="text-xs sm:text-sm text-gray-600 mb-2">Studi literatur teknologi terkini dan praktik terbaik, observasi lapangan, wawancara dengan pemangku kepentingan</p>
-                <p className="text-xs text-gray-500 font-medium">Literatur review, wawancara mendalam</p>
-              </div>
-              
-              {/* Step 2 - Pengumpulan Data */}
-              <div className="text-center" data-aos="fade-up" data-aos-delay="2000">
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold">2</span>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Pengumpulan Data</h4>
-                <p className="text-xs sm:text-sm text-gray-600 mb-2">Survei kebutuhan dan Focus Group Discussion (FGD) untuk menggali tantangan spesifik</p>
-                <p className="text-xs text-gray-500 font-medium">Kuantitatif (kuesioner digital), Kualitatif (FGD)</p>
-              </div>
-              
-              {/* Step 3 - Penyusunan Konsep */}
-              <div className="text-center" data-aos="fade-up" data-aos-delay="2100">
-                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold">3</span>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Penyusunan Konsep</h4>
-                <p className="text-xs sm:text-sm text-gray-600 mb-2">Pemetaan solusi teknologi berdasarkan matriks impact-feasibility, pembuatan prototipe sederhana</p>
-                <p className="text-xs text-gray-500 font-medium">Analisis prioritas, desain prototipe</p>
-              </div>
-              
-              {/* Step 4 - Penetapan Ide Final */}
-              <div className="text-center" data-aos="fade-up" data-aos-delay="2200">
-                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold">4</span>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Penetapan Ide Final</h4>
-                <p className="text-xs sm:text-sm text-gray-600 mb-2">Presentasi konsep kepada masyarakat desa, revisi berdasarkan masukan, penandatanganan MoU</p>
-                <p className="text-xs text-gray-500 font-medium">Dialog partisipatif, komitmen formal</p>
-              </div>
-              
-              {/* Step 5 - Eksekusi Langsung */}
-              <div className="text-center" data-aos="fade-up" data-aos-delay="2300">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold">5</span>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Eksekusi Langsung</h4>
-                <p className="text-xs sm:text-sm text-gray-600 mb-2">Pembagian tim (IoT, infrastruktur, AI), pelibatan masyarakat dalam instalasi dan pelatihan</p>
-                <p className="text-xs text-gray-500 font-medium">Implementasi terukur, pelatihan langsung</p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      
+      </div>
+
       {/* Minimal floating particles */}
       <div className="absolute top-1/4 left-1/3 w-1.5 h-1.5 bg-green-300 rounded-full opacity-40 animate-ping"></div>
       <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-emerald-300 rounded-full opacity-30 animate-ping delay-1000"></div>
