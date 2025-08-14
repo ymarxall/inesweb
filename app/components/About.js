@@ -52,7 +52,7 @@ export default function About() {
       duration: "2-3 Bulan",
       items: [
         "Survei kebutuhan masyarakat dengan kuesioner digital",
-        "Focus Group Discussion (FGD) dengan kelompok tani",
+        "Focus Group Discussion (FGD) dengan kelompok Terkait",
         "Wawancara mendalam dengan pemerintah desa",
         "Analisis data kuantitatif dan kualitatif"
       ]

@@ -71,17 +71,7 @@ export default function Gabung() {
         </div>
       </div>
 
-      {/* Tombol Aksi */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 mt-2 sm:mt-3 md:mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 text-center" data-aos="fade-up" data-aos-delay="600">
-        <Link href="/Tombol">
-          <button className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold px-3 sm:px-4 md:px-5 lg:px-7 xl:px-9 2xl:px-10 py-1 sm:py-1.5 md:py-2 lg:py-2.5 xl:py-3 2xl:py-3.5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25" data-aos="fade-up" data-aos-delay="650">
-            <span className="text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl">Lihat Timeline Digitalisasi Desa</span>
-            <svg className="ml-1 sm:ml-1.5 w-3 sm:w-4 md:w-4.5 lg:w-5 xl:w-6 2xl:w-7 h-3 sm:h-4 md:h-4.5 lg:h-5 xl:h-6 2xl:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </button>
-        </Link>
-      </div>
+      
     </section>
   );
 }

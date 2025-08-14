@@ -218,7 +218,7 @@ export default function BlogPage() {
             Cerita & Update
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Ikuti perjalanan digitalisasi desa dan berbagai kegiatan komunitas dalam membangun Indonesia digital
+            Ikuti perjalanan Transformasi desa dan berbagai kegiatan komunitas dalam membangun desa desa di Indonesia 
           </p>
         </div>
 

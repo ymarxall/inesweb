@@ -107,17 +107,11 @@ export default function Footer() {
             <div className="order-1 md:order-2">
               {/* Desktop Social - Horizontal */}
               <div className="hidden sm:flex gap-2 sm:gap-3 md:gap-5 lg:gap-7 xl:gap-9 2xl:gap-11 justify-center md:justify-end">
-                <a 
-                  href="https://www.youtube.com/@coconutcomputerclub3982" 
+                 <a 
+                  href="https://www.linkedin.com/company/coconut-computer-club/?originalSubdomain=id" 
                   className="text-white text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg font-medium hover:text-green-200 transition-colors duration-300"
                 >
-                  YouTube
-                </a>
-                <a 
-                  href="https://www.facebook.com/coconutcomputer" 
-                  className="text-white text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg font-medium hover:text-green-200 transition-colors duration-300"
-                >
-                  Facebook
+                  LinkedIn
                 </a>
                 <a 
                   href="https://www.instagram.com/coconutdotorg/" 
@@ -125,11 +119,17 @@ export default function Footer() {
                 >
                   Instagram
                 </a>
-                <a 
-                  href="#" 
+                  <a 
+                  href="https://www.facebook.com/coconutcomputer" 
                   className="text-white text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg font-medium hover:text-green-200 transition-colors duration-300"
                 >
-                  LinkedIn
+                  Facebook
+                </a>
+                <a 
+                  href="https://www.youtube.com/@coconutcomputerclub3982" 
+                  className="text-white text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg font-medium hover:text-green-200 transition-colors duration-300"
+                >
+                  YouTube
                 </a>
               </div>
 

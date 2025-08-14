@@ -1,10 +1,10 @@
+
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-
-
+import Timeline from '../components/Timeline';
 
 // ClientOnly wrapper for client-side-only components
 const ClientOnly = ({ children }) => {
@@ -15,10 +15,7 @@ const ClientOnly = ({ children }) => {
   return hasMounted ? children : null;
 };
 
-// BlogHeader component
-<Header />
-
-export default function BlogArticlePage() {
+export default function Bontomanai() {
   const [activeSection, setActiveSection] = useState(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isShareOpen, setIsShareOpen] = useState(false);
@@ -132,8 +129,7 @@ export default function BlogArticlePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-green-50/30">
- <Header />
-
+      <Header />
 
       {/* Progress Bar */}
       <ClientOnly>
@@ -318,7 +314,7 @@ export default function BlogArticlePage() {
                   </div>
                 </section>
 
-            
+                {/* Section 4: Pendekatan */}
                 <section id="pendekatan" className="mb-12 sm:mb-16" style={{ marginTop: '80px' }}>
                   <div className="flex items-center mb-4 sm:mb-6">
                     <div className="w-1 h-6 sm:h-8 bg-gradient-to-b from-green-500 to-blue-500 rounded-full mr-3 sm:mr-4"></div>
@@ -378,39 +374,7 @@ export default function BlogArticlePage() {
                         </div>
                       ))}
                     </div>
-                    <div className="mb-8">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Timeline Implementasi Sistem Informasi Desa</h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div className="text-center">
-                          <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span className="text-white font-bold">1</span>
-                          </div>
-                          <h5 className="font-semibold text-gray-900 mb-2">Fase Persiapan</h5>
-                          <p className="text-xs text-gray-600">Survey kebutuhan desa dan pelatihan awal untuk perangkat desa tentang sistem informasi.</p>
-                        </div>
-                        <div className="text-center">
-                          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span className="text-white font-bold">2</span>
-                          </div>
-                          <h5 className="font-semibold text-gray-900 mb-2">Instalasi Sistem</h5>
-                          <p className="text-xs text-gray-600">Pemasangan aplikasi persuratan, keuangan, dan website profil desa sesuai kebutuhan.</p>
-                        </div>
-                        <div className="text-center">
-                          <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span className="text-white font-bold">3</span>
-                          </div>
-                          <h5 className="font-semibold text-gray-900 mb-2">Sosialisasi dan Uji Coba</h5>
-                          <p className="text-xs text-gray-600">Pengenalan sistem kepada warga dan perangkat desa, serta pengujian fitur untuk memastikan fungsionalitas.</p>
-                        </div>
-                        <div className="text-center">
-                          <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span className="text-white font-bold">4</span>
-                          </div>
-                          <h5 className="font-semibold text-gray-900 mb-2">Peluncuran Resmi</h5>
-                          <p className="text-xs text-gray-600">Sistem informasi desa diluncurkan dengan dukungan teknis berkelanjutan.</p>
-                        </div>
-                      </div>
-                    </div>
+                    <Timeline />
                     <div className="bg-white rounded-xl p-6 shadow-md">
                       <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Target Dampak Digitalisasi</h4>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -431,8 +395,7 @@ export default function BlogArticlePage() {
                   </div>
                 </section>
 
-
-                {/* Section 5: Gallery - Improved & Responsive */}
+                {/* Section 5: Gallery */}
                 <section id="gallery" className="mb-12 sm:mb-16" style={{ marginTop: '80px' }}>
                   <div className="flex items-center mb-4 sm:mb-6">
                     <div className="w-1 h-6 sm:h-8 bg-gradient-to-b from-green-500 to-blue-500 rounded-full mr-3 sm:mr-4"></div>
@@ -440,7 +403,6 @@ export default function BlogArticlePage() {
                   </div>
                   <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="relative">
-                      {/* Carousel for All Devices */}
                       <div className="relative overflow-hidden rounded-xl">
                         <div
                           className="flex transition-transform duration-500 ease-in-out"
@@ -469,7 +431,6 @@ export default function BlogArticlePage() {
                                     {image.description}
                                   </p>
                                 </div>
-                                {/* Zoom Icon */}
                                 <div className="absolute top-3 right-3 bg-white/80 backdrop-blur-sm rounded-full p-1.5 opacity-0 hover:opacity-100 transition-opacity duration-300">
                                   <svg className="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
@@ -479,7 +440,6 @@ export default function BlogArticlePage() {
                             </div>
                           ))}
                         </div>
-                        {/* Navigation Buttons */}
                         <button
                           onClick={() => setSelectedImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)}
                           className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm text-gray-800 p-2 sm:p-3 rounded-full shadow-lg hover:bg-white hover:scale-110 transition-all duration-200 z-10"
@@ -498,7 +458,6 @@ export default function BlogArticlePage() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                           </svg>
                         </button>
-                        {/* Dots Indicator */}
                         <div className="flex justify-center mt-4 space-x-2">
                           {galleryImages.map((_, index) => (
                             <button
@@ -515,136 +474,6 @@ export default function BlogArticlePage() {
                     </div>
                   </div>
                 </section>
-
-                {/* Improved Lightbox Modal */}
-                <ClientOnly>
-                  {isLightboxOpen && (
-                    <div
-                      className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center"
-                      role="dialog"
-                      aria-label="Image lightbox"
-                    >
-                      {/* Background Click to Close */}
-                      <div className="absolute inset-0" onClick={closeLightbox} />
-                      
-                      {/* Main Content Container */}
-                      <div className="relative w-full max-w-5xl h-full flex items-center justify-center p-4 sm:p-6">
-                        {/* Image Container */}
-                        <div className="relative bg-white rounded-xl shadow-2xl overflow-hidden w-full max-w-[95vw] max-h-[85vh] flex flex-col">
-                          {/* Image Wrapper */}
-                          <div className="relative flex items-center justify-center bg-gray-100">
-                            <img
-                              src={galleryImages[selectedImage].src}
-                              alt={galleryImages[selectedImage].alt}
-                              className="w-full h-auto max-h-[70vh] object-contain"
-                              onTouchStart={handleTouchStart}
-                              onTouchEnd={handleTouchEnd}
-                              style={{ maxWidth: '100%', maxHeight: '70vh' }}
-                            />
-                            {/* Loading Placeholder */}
-                            <div className="absolute inset-0 bg-gray-100 animate-pulse rounded-lg" style={{ zIndex: -1 }} />
-                          </div>
-                          
-                          {/* Caption */}
-                          <div className="bg-white border-t border-gray-100 p-4 sm:p-6">
-                            <div className="flex items-start justify-between">
-                              <div className="flex-1">
-                                <p className="text-gray-800 text-sm sm:text-base font-medium mb-1">
-                                  {galleryImages[selectedImage].description}
-                                </p>
-                                <p className="text-gray-500 text-xs sm:text-sm">
-                                  Foto {selectedImage + 1} dari {galleryImages.length}
-                                </p>
-                              </div>
-                              <div className="flex items-center space-x-2 ml-4">
-                                <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">
-                                  Galeri Kegiatan
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Navigation Buttons */}
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setSelectedImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
-                          }}
-                          className="absolute left-4 sm:left-6 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm text-gray-800 p-3 sm:p-4 rounded-full hover:bg-white hover:scale-110 transition-all duration-200 shadow-lg z-10"
-                          aria-label="Previous image"
-                        >
-                          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                          </svg>
-                        </button>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setSelectedImage((prev) => (prev + 1) % galleryImages.length);
-                          }}
-                          className="absolute right-4 sm:right-6 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm text-gray-800 p-3 sm:p-4 rounded-full hover:bg-white hover:scale-110 transition-all duration-200 shadow-lg z-10"
-                          aria-label="Next image"
-                        >
-                          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                          </svg>
-                        </button>
-
-                        {/* Close Button */}
-                        <button
-                          onClick={closeLightbox}
-                          className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/90 backdrop-blur-sm text-gray-800 p-2 sm:p-3 rounded-full hover:bg-white hover:scale-110 transition-all duration-200 shadow-lg z-10"
-                          aria-label="Close lightbox"
-                        >
-                          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        </button>
-
-                        {/* Image Counter */}
-                        <div className="absolute top-4 sm:top-6 left-4 sm:left-6 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-                          {selectedImage + 1} / {galleryImages.length}
-                        </div>
-
-                        {/* Thumbnail Navigation */}
-                        <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg max-w-[90vw] overflow-x-auto z-10">
-                          <div className="flex items-center space-x-2">
-                            {galleryImages.map((image, index) => (
-                              <button
-                                key={index}
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  setSelectedImage(index);
-                                }}
-                                className={`flex-shrink-0 w-12 h-8 rounded overflow-hidden border-2 transition-all duration-200 ${
-                                  selectedImage === index
-                                    ? 'border-green-500 scale-110 shadow-md'
-                                    : 'border-transparent hover:border-gray-300 hover:scale-105'
-                                }`}
-                                aria-label={`Go to image ${index + 1}`}
-                              >
-                                <img
-                                  src={image.src}
-                                  alt={`Thumbnail ${index + 1}`}
-                                  className="w-full h-full object-contain"
-                                />
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Keyboard Shortcuts Info */}
-                        <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 bg-black/70 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-xs hidden sm:block z-10">
-                          <div className="flex items-center space-x-3">
-                            <span>←→ Navigate</span>
-                            <span>ESC Close</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </ClientOnly>
 
                 {/* Section 6: Kesimpulan */}
                 <section id="kesimpulan" className="mb-8 sm:mb-16" style={{ marginTop: '80px' }}>
@@ -681,55 +510,108 @@ export default function BlogArticlePage() {
           <ClientOnly>
             {isLightboxOpen && (
               <div
-                className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center"
-                onClick={closeLightbox}
-                onTouchStart={handleTouchStart}
-                onTouchEnd={handleTouchEnd}
+                className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center"
                 role="dialog"
                 aria-label="Image lightbox"
               >
-                <div className="relative max-w-5xl w-full mx-4 h-full flex items-center justify-center">
-                  <div className="relative max-h-[80vh] w-full bg-white rounded-xl overflow-hidden shadow-2xl">
-                    <div className="aspect-w-16 aspect-h-9">
+                <div className="relative w-full max-w-5xl h-full flex items-center justify-center p-4 sm:p-6">
+                  <div className="relative bg-white rounded-xl shadow-2xl overflow-hidden w-full max-w-[95vw] max-h-[85vh] flex flex-col">
+                    <div className="relative flex items-center justify-center bg-gray-100">
                       <img
                         src={galleryImages[selectedImage].src}
                         alt={galleryImages[selectedImage].alt}
-                        className="w-full h-full object-contain"
+                        className="w-full h-auto max-h-[70vh] object-contain"
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+                        style={{ maxWidth: '100%', maxHeight: '70vh' }}
                       />
+                      <div className="absolute inset-0 bg-gray-100 animate-pulse rounded-lg" style={{ zIndex: -1 }} />
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                      <p className="text-white text-sm sm:text-base lg:text-lg text-center">
-                        {galleryImages[selectedImage].description}
-                      </p>
+                    <div className="bg-white border-t border-gray-100 p-4 sm:p-6">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <p className="text-gray-800 text-sm sm:text-base font-medium mb-1">
+                            {galleryImages[selectedImage].description}
+                          </p>
+                          <p className="text-gray-500 text-xs sm:text-sm">
+                            Foto {selectedImage + 1} dari {galleryImages.length}
+                          </p>
+                        </div>
+                        <div className="flex items-center space-x-2 ml-4">
+                          <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">
+                            Galeri Kegiatan
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <button
-                    onClick={closeLightbox}
-                    className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-all duration-200"
-                    aria-label="Close lightbox"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                  <button
-                    onClick={() => setSelectedImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-all duration-200"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+                    }}
+                    className="absolute left-4 sm:left-6 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm text-gray-800 p-3 sm:p-4 rounded-full hover:bg-white hover:scale-110 transition-all duration-200 shadow-lg z-10"
                     aria-label="Previous image"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
                   <button
-                    onClick={() => setSelectedImage((prev) => (prev + 1) % galleryImages.length)}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-all duration-200"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedImage((prev) => (prev + 1) % galleryImages.length);
+                    }}
+                    className="absolute right-4 sm:right-6 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm text-gray-800 p-3 sm:p-4 rounded-full hover:bg-white hover:scale-110 transition-all duration-200 shadow-lg z-10"
                     aria-label="Next image"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
+                  <button
+                    onClick={closeLightbox}
+                    className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/90 backdrop-blur-sm text-gray-800 p-2 sm:p-3 rounded-full hover:bg-white hover:scale-110 transition-all duration-200 shadow-lg z-10"
+                    aria-label="Close lightbox"
+                  >
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                  <div className="absolute top-4 sm:top-6 left-4 sm:left-6 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
+                    {selectedImage + 1} / {galleryImages.length}
+                  </div>
+                  <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg max-w-[90vw] overflow-x-auto z-10">
+                    <div className="flex items-center space-x-2">
+                      {galleryImages.map((image, index) => (
+                        <button
+                          key={index}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedImage(index);
+                          }}
+                          className={`flex-shrink-0 w-12 h-8 rounded overflow-hidden border-2 transition-all duration-200 ${
+                            selectedImage === index
+                              ? 'border-green-500 scale-110 shadow-md'
+                              : 'border-transparent hover:border-gray-300 hover:scale-105'
+                          }`}
+                          aria-label={`Go to image ${index + 1}`}
+                        >
+                          <img
+                            src={image.src}
+                            alt={`Thumbnail ${index + 1}`}
+                            className="w-full h-full object-contain"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 bg-black/70 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-xs hidden sm:block z-10">
+                    <div className="flex items-center space-x-3">
+                      <span>←→ Navigate</span>
+                      <span>ESC Close</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -757,7 +639,7 @@ export default function BlogArticlePage() {
                       },
                       {
                         name: 'youtube',
-                        icon: 'M23.498 6.186a2.917 2.917 0 0 0-2.048-2.048C19.896 3.584 12 3.584 12 3.584s-7.896 0-9.45.554a2.917 2.917 0 0 0-2.048 2.048C.584 7.74.584 12 .584 12s0 4.26.554 5.814a2.917 2.917 0 0 0 2.048 2.048c1.554.554 9.45.554 9.45.554s7.896 0 9.45-.554a2.917 2.917 0 0 0 2.048-2.048c.554-1.554.554-5.814.554-5.814s0-4.26-.554-5.814zm-13.498 9.814V8l6.5 4-6.5 4z',
+                        icon: 'M23.498 6.186a2.917 2.917 0 0 0-2.048-2.048C19.896 3.584 12 3.584 12 3.584s-7.896 0-9.45.554a2.917 2.917 0 0 0-2.048 2.048C.584 7.74.584 12 .584 12s0 4.26.554 5.814a2.917 2.917 0 0 0 2.048 2.188c1.554.554 9.45.554 9.45.554s7.896 0 9.45-.554a2.917 2.917 0 0 0 2.048-2.048c.554-1.554.554-5.814.554-5.814s0-4.26-.554-5.814zm-13.498 9.814V8l6.5 4-6.5 4z',
                         color: 'bg-red-600 hover:bg-red-700',
                         label: 'YouTube',
                       },
@@ -850,7 +732,7 @@ export default function BlogArticlePage() {
                     {[
                       {
                         name: 'youtube',
-                        icon: 'M23.498 6.186a2.917 2.917 0 0 0-2.048-2.048C19.896 3.584 12 3.584 12 3.584s-7.896 0-9.45.554a2.917 2.917 0 0 0-2.048 2.048C.584 7.74.584 12 .584 12s0 4.26.554 5.814a2.917 2.917 0 0 0 2.048 2.048c1.554.554 9.45.554 9.45.554s7.896 0 9.45-.554a2.917 2.917 0 0 0 2.048-2.048c.554-1.554.554-5.814.554-5.814s0-4.26-.554-5.814zm-13.498 9.814V8l6.5 4-6.5 4z',
+                        icon: 'M23.498 6.186a2.917 2.917 0 0 0-2.048-2.048C19.896 3.584 12 3.584 12 3.584s-7.896 0-9.45.554a2.917 2.917 0 0 0-2.048 2.048C.584 7.74.584 12 .584 12s0 4.26.554 5.814a2.917 2.917 0 0 0 2.048 2.188c1.554.554 9.45.554 9.45.554s7.896 0 9.45-.554a2.917 2.917 0 0 0 2.048-2.048c.554-1.554.554-5.814.554-5.814s0-4.26-.554-5.814zm-13.498 9.814V8l6.5 4-6.5 4z',
                         color: 'bg-red-600 hover:bg-red-700',
                         label: 'YouTube',
                       },

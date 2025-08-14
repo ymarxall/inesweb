@@ -25,7 +25,7 @@ export default function Services() {
         {/* Services Grid - optimized spacing for mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mx-4 sm:mx-6 lg:mx-8">
           
-          {/* Service Card 1 - Village Administration */}
+          {/* Service Card 1 - IoT (Internet of Things) */}
           <div className="group bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl border border-gray-100 hover:border-green-200 transition-all duration-300 sm:duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
             <div className="flex flex-col items-center text-center">
               {/* Icon Container - mobile optimized sizes */}
@@ -33,29 +33,29 @@ export default function Services() {
                 <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-full opacity-15 group-hover:opacity-25 sm:group-hover:opacity-30 blur-md sm:blur-lg transition-opacity duration-300 sm:duration-500"></div>
                 <img 
                   src="/a1.png" 
-                  alt="Sistem administrasi desa" 
+                  alt="IoT untuk desa" 
                   className="relative w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 object-contain drop-shadow-lg"
                   loading="lazy"
                 />
                 {/* Floating badge - hidden on small mobile */}
                 <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 bg-green-500 text-white text-xs font-bold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden xs:block">
-                  Admin
+                  IoT
                 </div>
               </div>
               
               {/* Content */}
               <div className="space-y-2 sm:space-y-4">
                 <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors duration-300 leading-tight" data-aos="fade-up" data-aos-delay="600">
-                  Sistem Administrasi Desa
+                  IoT (Internet of Things)
                 </h3>
                 <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="700">
-                  Solusi terintegrasi untuk kebutuhan administrasi desa, mulai dari profil desa, pengelolaan keuangan, hingga layanan masyarakat yang efisien dan transparan.
+                  Teknologi IoT untuk pemantauan real-time di pertanian, perkebunan, dan peternakan, seperti irigasi otomatis dan sensor kelembaban tanah, serta sistem smart waste management berbasis komunitas.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Service Card 2 - Infrastructure */}
+          {/* Service Card 2 - Infrastruktur Digital */}
           <div className="group bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl border border-gray-100 hover:border-blue-200 transition-all duration-300 sm:duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2" data-aos="fade-up" data-aos-delay="800">
             <div className="flex flex-col items-center text-center">
               {/* Icon Container */}
@@ -63,29 +63,31 @@ export default function Services() {
                 <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-15 group-hover:opacity-25 sm:group-hover:opacity-30 blur-md sm:blur-lg transition-opacity duration-300 sm:duration-500"></div>
                 <img 
                   src="/a2.png" 
-                  alt="Infrastruktur teknologi desa" 
+                  alt="Infrastruktur digital desa" 
                   className="relative w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 object-contain drop-shadow-lg"
                   loading="lazy"
                 />
                 {/* Floating badge */}
                 <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 bg-blue-500 text-white text-xs font-bold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden xs:block">
-                  Smart
+                  Digital
                 </div>
               </div>
               
               {/* Content */}
               <div className="space-y-2 sm:space-y-4">
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300 leading-tight" data-aos="fade-up" data-aos-delay="1000">
-                  Infrastruktur Desa
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transitionਰ
+
+                transition-colors duration-300 leading-tight" data-aos="fade-up" data-aos-delay="1000">
+                  Infrastruktur Digital
                 </h3>
                 <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="1100">
-                  Pengembangan infrastruktur desa yang mendukung konektivitas, akses informasi, dan pengelolaan sumber daya yang berkelanjutan sesuai kebutuhan lokal.
+                  Jaringan internet desa berbasis energi terbarukan seperti panel surya dan digital hub sebagai pusat akses informasi serta pelatihan untuk mendukung konektivitas dan perkembangan komunitas.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Service Card 3 - Livelihood Enhancement */}
+          {/* Service Card 3 - AI (Artificial Intelligence) */}
           <div className="group bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl border border-gray-100 hover:border-purple-200 transition-all duration-300 sm:duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2 md:col-span-2 xl:col-span-1" data-aos="fade-up" data-aos-delay="1200">
             <div className="flex flex-col items-center text-center">
               {/* Icon Container */}
@@ -93,31 +95,30 @@ export default function Services() {
                 <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-15 group-hover:opacity-25 sm:group-hover:opacity-30 blur-md sm:blur-lg transition-opacity duration-300 sm:duration-500"></div>
                 <img 
                   src="/a3.png" 
-                  alt="Peningkatan mata pencaharian warga desa" 
+                  alt="AI untuk desa" 
                   className="relative w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 object-contain drop-shadow-lg"
                   loading="lazy"
                 />
                 {/* Floating badge */}
                 <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 bg-purple-500 text-white text-xs font-bold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden xs:block">
-                  Growth
+                  AI
                 </div>
               </div>
               
               {/* Content */}
-              <div className="space-y-2 sm:space-y-4">
+              <div className="space-y-2 sm:space(inode
+
+              space-y-4">
                 <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300 leading-tight" data-aos="fade-up" data-aos-delay="1400">
-                  Peningkatan Mata Pencaharian
+                  AI (Artificial Intelligence)
                 </h3>
                 <p className="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="1500">
-                  Pemberdayaan ekonomi masyarakat melalui optimalisasi potensi lokal, peningkatan produktivitas, dan akses pasar yang lebih luas dengan bantuan teknologi.
+                  Pemanfaatan AI untuk prediksi hasil panen, analisis pasar pertanian, dan chatbot layanan publik desa berbasis NLP, LLM, dan DLLM untuk pelayanan yang lebih cepat dan efisien.
                 </p>
-               
               </div>
             </div>
           </div>
         </div>
-
-     
       </div>
     </section>
   );

@@ -11,13 +11,13 @@ export default function FAQ() {
   const faqData = [
     {
       id: 'faq1',
-      question: 'Apa itu INESA dan bagaimana berbeda dengan digitalisasi biasa?',
-      answer: 'INESA (Inovasi dan Edukasi Desa) adalah program komprehensif yang mengidentifikasi masalah nyata di desa terlebih dahulu, baru kemudian merancang solusi teknologi yang tepat guna. Berbeda dengan digitalisasi umum, INESA tidak memaksakan teknologi tertentu, melainkan mendengarkan kebutuhan masyarakat dan mengintegrasikan kearifan lokal dalam setiap solusinya.'
+      question: 'Apa itu INESA ?',
+      answer: 'INESA (Inovasi dan Edukasi Desa), sebuah inisiatif unggulan dari COCONUT Computer Club yang dirancang untuk membawa perubahan nyata di pedesaan. Berlandaskan pada teori pemberdayaan masyarakat dan sustainable development, INESA menggabungkan teknologi modern seperti Internet of Things (IoT), Artificial Intelligence (AI), dan penguatan infrastruktur digital untuk meningkatkan kemandirian dan kesejahteraan masyarakat desa.'
     },
     {
       id: 'faq2',
       question: 'Masalah apa saja yang bisa ditangani INESA?',
-      answer: 'INESA menangani berbagai masalah desa seperti: ineffisiensi pertanian dan peternakan, pengelolaan sampah dan lingkungan, kesulitan akses pasar UMKM, administrasi desa yang lambat, overfishing di daerah pesisir, keterbatasan energi, dan kurangnya transparansi pelayanan publik. Setiap masalah ditangani dengan pendekatan teknologi yang disesuaikan dengan kondisi lokal.'
+      answer: 'INESA menangani berbagai masalah desa seperti: efisiensi pertanian dan peternakan, pengelolaan sampah dan lingkungan, kesulitan akses pasar UMKM, administrasi desa yang lambat, overfishing di daerah pesisir, keterbatasan energi, dan kurangnya transparansi pelayanan publik. Setiap masalah ditangani dengan pendekatan teknologi yang disesuaikan dengan kondisi lokal.'
     },
     {
       id: 'faq3',
@@ -154,3 +154,156 @@ export default function FAQ() {
     </section>
   )
 }
+
+
+
+// Improved Timeline Component with better visual hierarchy
+const ImprovedTimeline = () => {
+  const timelineData = [
+    {
+      number: 1,
+      title: "Fase Persiapan",
+      description: "Survey kebutuhan desa dan pelatihan awal untuk perangkat desa tentang sistem informasi.",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      ),
+      color: "from-emerald-500 to-teal-600",
+      lightColor: "from-emerald-50 to-teal-50",
+      textColor: "text-emerald-700",
+    },
+    {
+      number: 2,
+      title: "Instalasi Sistem",
+      description: "Pemasangan aplikasi persuratan, keuangan, dan website profil desa sesuai kebutuhan.",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+        </svg>
+      ),
+      color: "from-blue-500 to-indigo-600",
+      lightColor: "from-blue-50 to-indigo-50",
+      textColor: "text-blue-700",
+    },
+    {
+      number: 3,
+      title: "Sosialisasi dan Uji Coba",
+      description: "Pengenalan sistem kepada warga dan perangkat desa, serta pengujian fitur untuk memastikan fungsionalitas.",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+        </svg>
+      ),
+      color: "from-purple-500 to-violet-600",
+      lightColor: "from-purple-50 to-violet-50",
+      textColor: "text-purple-700",
+    },
+    {
+      number: 4,
+      title: "Peluncuran Resmi",
+      description: "Sistem informasi desa diluncurkan dengan dukungan teknis berkelanjutan.",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+        </svg>
+      ),
+      color: "from-rose-500 to-pink-600",
+      lightColor: "from-rose-50 to-pink-50",
+      textColor: "text-rose-700",
+    },
+  ];
+
+  return (
+    <div className="w-full max-w-6xl mx-auto p-6">
+      <div className="text-center mb-12">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          Timeline Implementasi
+        </h3>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Proses transformasi digital desa yang terstruktur dan berkelanjutan
+        </p>
+      </div>
+      
+      {/* Desktop Timeline */}
+      <div className="hidden lg:block">
+        <div className="relative">
+          {/* Connecting Line */}
+          <div className="absolute top-20 left-0 right-0 h-1 bg-gradient-to-r from-emerald-200 via-blue-200 via-purple-200 to-rose-200 rounded-full"></div>
+          
+          <div className="grid grid-cols-4 gap-8">
+            {timelineData.map((item, index) => (
+              <div key={index} className="relative group">
+                {/* Circle with Icon */}
+                <div className={`relative w-20 h-20 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl hover:scale-110 transition-all duration-300 z-10 group-hover:shadow-2xl`}>
+                  {item.icon}
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-gray-700 font-bold text-sm">{item.number}</span>
+                  </div>
+                  {/* Pulse Animation */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} rounded-full animate-ping opacity-20`}></div>
+                </div>
+                
+                {/* Arrow */}
+                {index < timelineData.length - 1 && (
+                  <div className="absolute top-10 -right-4 z-20">
+                    <svg className="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                    </svg>
+                  </div>
+                )}
+                
+                {/* Content Card */}
+                <div className={`bg-gradient-to-br ${item.lightColor} rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50 backdrop-blur-sm`}>
+                  <h4 className={`font-bold ${item.textColor} mb-3 text-lg text-center`}>
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-700 text-sm leading-relaxed text-center">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Timeline */}
+      <div className="lg:hidden">
+        <div className="relative">
+          {/* Vertical Line */}
+          <div className="absolute left-10 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-200 via-blue-200 via-purple-200 to-rose-200 rounded-full"></div>
+          
+          <div className="space-y-8">
+            {timelineData.map((item, index) => (
+              <div key={index} className="relative flex items-start">
+                {/* Circle with Icon */}
+                <div className={`relative w-20 h-20 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-6 shadow-xl z-10 flex-shrink-0`}>
+                  {item.icon}
+                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md">
+                    <span className="text-gray-700 font-bold text-xs">{item.number}</span>
+                  </div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} rounded-full animate-ping opacity-20`}></div>
+                </div>
+                
+                {/* Content Card */}
+                <div className={`bg-gradient-to-br ${item.lightColor} rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-1 border border-white/50 backdrop-blur-sm`}>
+                  <h4 className={`font-bold ${item.textColor} mb-3 text-lg`}>
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+ImprovedTimeline.propTypes = {
+  // No props are passed to this component
+};
