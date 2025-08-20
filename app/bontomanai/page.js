@@ -717,14 +717,7 @@ export default function Bontomanai() {
                 <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 border border-purple-200 shadow-lg">
                   <h3 className="font-semibold text-gray-800 mb-4">Statistik Artikel</h3>
                   <div className="space-y-3">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Waktu Baca</span>
-                      <span className="font-medium text-purple-700">6 menit</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Kata</span>
-                      <span className="font-medium text-purple-700">~1200</span>
-                    </div>
+                   
                     <div className="flex justify-between items-center">
                       <span className="text-sm text-gray-600">Kategori</span>
                       <span className="bg-purple-200 text-purple-800 px-2 py-1 rounded-full text-xs font-medium">Digitalisasi</span>
