@@ -1,4 +1,3 @@
-
 'use client';
 import React from 'react';
 
@@ -31,20 +30,22 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="mb-8">
-      <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Timeline Implementasi Sistem Informasi Desa</h4>
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="mb-8 px-4 sm:px-6 lg:px-8">
+      <h4 className="text-lg sm:text-xl font-semibold text-gray-800 mb-6 text-center">
+        Timeline Implementasi Sistem Informasi Desa
+      </h4>
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {timelineData.map((item, index) => (
           <div key={index} className="relative text-center">
-            <div className={`w-12 h-12 ${item.bgColor} rounded-full flex items-center justify-center mx-auto mb-3 z-10 relative`}>
-              <span className="text-white font-bold">{item.number}</span>
+            <div className={`w-10 h-10 ${item.bgColor} rounded-full flex items-center justify-center mx-auto mb-3 z-10 relative shadow-md`}>
+              <span className="text-white font-bold text-base">{item.number}</span>
             </div>
-            <h5 className="font-semibold text-gray-900 mb-2">{item.title}</h5>
-            <p className="text-xs text-gray-600">{item.description}</p>
+            <h5 className="font-semibold text-gray-800 text-sm sm:text-base mb-2">{item.title}</h5>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.description}</p>
             {/* Add arrows between items, except for the last item */}
             {index < timelineData.length - 1 && (
               <svg
-                className="absolute top-5 -right-4 hidden lg:block w-8 h-4 text-gray-500"
+                className="absolute top-4 -right-3 hidden lg:block w-6 h-4 text-gray-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

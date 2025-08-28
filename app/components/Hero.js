@@ -74,17 +74,17 @@ export default function Hero() {
                 />
               </div>
               
-             {/* Floating Elements */}
-              <div className="absolute bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 sm:p-2.5 md:p-3 lg:p-3.5 xl:p-4 2xl:p-4.5 transform rotate-12 hover:rotate-0 transition-transform duration-300" style={{ top: '10px', left: '-42px' }}>
-                <div className="flex items-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
-                  <div className="w-2 sm:w-2.5 md:w-3 lg:w-3.5 xl:w-4 2xl:w-4.5 h-2 sm:h-2.5 md:h-3 lg:h-3.5 xl:h-4 2xl:h-4.5 bg-green-500 rounded-full mr-2 sm:mr-2.5 md:mr-3"></div>
+              {/* Floating Elements */}
+              <div className="absolute bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-1.5 sm:p-2 md:p-2.5 lg:p-3 xl:p-3.5 2xl:p-4 transform rotate-12 hover:rotate-0 transition-transform duration-300" style={{ top: '5px', left: '-20px' }}>
+                <div className="flex items-center text-xs sm:text-sm md:text-sm lg:text-base xl:text-base 2xl:text-lg">
+                  <div className="w-1.5 sm:w-2 md:w-2.5 lg:w-3 xl:w-3.5 2xl:w-4 h-1.5 sm:h-2 md:h-2.5 lg:h-3 xl:h-3.5 2xl:h-4 bg-green-500 rounded-full mr-1.5 sm:mr-2 md:mr-2.5"></div>
                   <span className="font-medium">Inovatif</span>
                 </div>
               </div>
               
-              <div className="absolute bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 sm:p-2.5 md:p-3 lg:p-3.5 xl:p-4 2xl:p-4.5 transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{ bottom: '65px', right: '-55px' }}>
-                <div className="flex items-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
-                  <div className="w-2 sm:w-2.5 md:w-3 lg:w-3.5 xl:w-4 2xl:w-4.5 h-2 sm:h-2.5 md:h-3 lg:h-3.5 xl:h-4 2xl:h-4.5 bg-blue-500 rounded-full mr-2 sm:mr-2.5 md:mr-3"></div>
+              <div className="absolute bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-1.5 sm:p-2 md:p-2.5 lg:p-3 xl:p-3.5 2xl:p-4 transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{ bottom: '50px', right: '-30px' }}>
+                <div className="flex items-center text-xs sm:text-sm md:text-sm lg:text-base xl:text-base 2xl:text-lg">
+                  <div className="w-1.5 sm:w-2 md:w-2.5 lg:w-3 xl:w-3.5 2xl:w-4 h-1.5 sm:h-2 md:h-2.5 lg:h-3 xl:h-3.5 2xl:h-4 bg-blue-500 rounded-full mr-1.5 sm:mr-2 md:mr-2.5"></div>
                   <span className="font-medium">Transparan</span>
                 </div>
               </div>
