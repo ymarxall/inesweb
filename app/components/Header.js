@@ -33,11 +33,11 @@ export default function Header() {
       >
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-3 flex items-center justify-between max-w-full mx-4 sm:mx-6 lg:mx-8">
           {/* Logo */}
-          <div className="flex items-center flex-shrink-0">
+          <div className="flex items-center flex-shrink-0 ml-[-1.5rem] sm:ml-[-2rem] lg:ml-[-2. банковский депозит5rem]">
             <img 
-              src="/logoinesa.png" 
+              src="/ines.png" 
               alt="Logo Inesa" 
-              className="h-10 w-auto sm:h-11 lg:h-12"
+              className="h-8 w-auto sm:h-9 lg:h-10"
               loading="lazy"
             />
           </div>
@@ -129,7 +129,7 @@ export default function Header() {
               <img 
                 src="/inesabaru.jpg" 
                 alt="Logo Inesa" 
-                className="h-10 w-auto"
+                className="h-8 w-auto"
                 loading="lazy"
               />
               <button
