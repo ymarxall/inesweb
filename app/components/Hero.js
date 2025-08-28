@@ -75,14 +75,14 @@ export default function Hero() {
               </div>
               
              {/* Floating Elements */}
-              <div className="absolute bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 sm:p-2.5 md:p-3 lg:p-3.5 xl:p-4 2xl:p-4.5 transform rotate-12 hover:rotate-0 transition-transform duration-300" style={{ top: '10px', left: '-45px' }}>
+              <div className="absolute bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 sm:p-2.5 md:p-3 lg:p-3.5 xl:p-4 2xl:p-4.5 transform rotate-12 hover:rotate-0 transition-transform duration-300" style={{ top: '10px', left: '-42px' }}>
                 <div className="flex items-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
                   <div className="w-2 sm:w-2.5 md:w-3 lg:w-3.5 xl:w-4 2xl:w-4.5 h-2 sm:h-2.5 md:h-3 lg:h-3.5 xl:h-4 2xl:h-4.5 bg-green-500 rounded-full mr-2 sm:mr-2.5 md:mr-3"></div>
                   <span className="font-medium">Inovatif</span>
                 </div>
               </div>
               
-              <div className="absolute bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 sm:p-2.5 md:p-3 lg:p-3.5 xl:p-4 2xl:p-4.5 transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{ bottom: '65px', right: '-75px' }}>
+              <div className="absolute bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 sm:p-2.5 md:p-3 lg:p-3.5 xl:p-4 2xl:p-4.5 transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{ bottom: '65px', right: '-55px' }}>
                 <div className="flex items-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
                   <div className="w-2 sm:w-2.5 md:w-3 lg:w-3.5 xl:w-4 2xl:w-4.5 h-2 sm:h-2.5 md:h-3 lg:h-3.5 xl:h-4 2xl:h-4.5 bg-blue-500 rounded-full mr-2 sm:mr-2.5 md:mr-3"></div>
                   <span className="font-medium">Transparan</span>

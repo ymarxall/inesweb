@@ -31,9 +31,9 @@ export default function Header() {
             : 'bg-gradient-to-b from-green-50/80 to-transparent backdrop-blur-sm'
         }`}
       >
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-3 flex items-center justify-between max-w-full mx-4 sm:mx-6 lg:mx-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between max-w-screen-xl">
           {/* Logo */}
-          <div className="flex items-center flex-shrink-0 ml-[-1.5rem] sm:ml-[-2rem] lg:ml-[-2. банковский депозит5rem]">
+          <div className="flex items-center flex-shrink-0 ml-0">
             <img 
               src="/ines.png" 
               alt="Logo Inesa" 
@@ -123,9 +123,9 @@ export default function Header() {
           />
           
           {/* Mobile Menu */}
-          <div className="fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out overflow-x-hidden">
+          <div className="fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out">
             {/* Menu Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-100">
+            <div className="flex items-center justify-between p-4 border-b border-gray-100">
               <img 
                 src="/inesabaru.jpg" 
                 alt="Logo Inesa" 
@@ -144,7 +144,7 @@ export default function Header() {
             </div>
 
             {/* Menu Items */}
-            <nav className="flex flex-col p-6 space-y-1">
+            <nav className="flex flex-col p-4 space-y-1">
               <Link
                 href="/#home"
                 className="font-medium text-gray-800 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-colors duration-200 text-lg"
@@ -178,7 +178,7 @@ export default function Header() {
               <div className="pt-6 mt-6 border-t border-gray-100">
                 <Link
                   href="/#contact"
-                  className="block w-full font-semibold text-center text-white bg-green-600 hover:bg-green-700 px-5 py-3 sm:px-6 sm:py-4 rounded-lg transition-colors duration-200 text-lg shadow-md"
+                  className="block w-full font-semibold text-center text-white bg-green-600 hover:bg-green-700 px-5 py-3 rounded-lg transition-colors duration-200 text-lg shadow-md"
                   onClick={closeMenu}
                 >
                   Hubungi Kami

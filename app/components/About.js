@@ -324,8 +324,8 @@ export default function About() {
         </div>
 
         {/* Compact Core Principles */}
-        <div className="grid lg:grid-cols-2 items-center fade-in" style={{opacity: 0, transform: 'translateY(20px)', transition: 'all 0.6s ease 0.8s', marginBottom: '80px'}}>
-          <div>
+        <div className="grid lg:grid-cols-2 items-start gap-6 sm:gap-8 md:gap-10 fade-in" style={{opacity: 0, transform: 'translateY(20px)', transition: 'all 0.6s ease 0.8s', marginBottom: '80px'}}>
+          <div className="pt-4 sm:pt-6">
             <h3 className="text-2xl font-bold text-gray-800 mb-5">
               Prinsip <span className="text-green-500">Teknologi Tepat Guna</span>
             </h3>
@@ -368,8 +368,8 @@ export default function About() {
             </div>
           </div>
           
-          <div className="relative">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100">
+          <div className="relative mt-6 sm:mt-8 md:mt-10">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 sm:p-8 border border-green-100">
               <div className="text-center mb-5">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-3">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

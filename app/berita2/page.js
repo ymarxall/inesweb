@@ -126,39 +126,31 @@ const NewsArticle = () => {
                           {
                             name: 'LinkedIn',
                             href: 'https://www.linkedin.com/company/coconut-computer-club/?originalSubdomain=id',
-                            icon: (
-                              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" stroke="currentColor" strokeWidth="0.5"/>
-                              </svg>
-                            ),
+                            icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" stroke="currentColor" strokeWidth="0.5"/>
+                            </svg>
                           },
                           {
                             name: 'Instagram',
                             href: 'https://www.instagram.com/coconutdotorg/',
-                            icon: (
-                              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm0 2H8a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3m-4 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4m4.5-3.5a1 1 0 1 1 0 2a1 1 0 0 1 0-2" stroke="currentColor" strokeWidth="0.5"/>
-                              </svg>
-                            ),
+                            icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm0 2H8a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3m-4 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4m4.5-3.5a1 1 0 1 1 0 2a1 1 0 0 1 0-2" stroke="currentColor" strokeWidth="0.5"/>
+                            </svg>
                           },
                           {
                             name: 'Facebook',
                             href: 'https://www.facebook.com/coconutcomputer',
-                            icon: (
-                              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.437 9.878v-6.987h-2.54V12h2.54V9.845c0-2.51 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
-                              </svg>
-                            ),
+                            icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.437 9.878v-6.987h-2.54V12h2.54V9.845c0-2.51 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                            </svg>
                           },
                           {
                             name: 'YouTube',
                             href: 'https://www.youtube.com/@coconutcomputerclub3982',
-                            icon: (
-                              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.498 6.186a2.977 2.977 0 00-2.094-2.094C19.582 3.5 12 3.5 12 3.5s-7.582 0-9.404.592A2.977 2.977 0 00.502 6.186C0 7.986 0 12 0 12s0 4.014.502 5.814a2.977 2.977 0 002.094 2.094C4.418 20.5 12 20.5 12 20.5s7.582 0 9.404-.592a2.977 2.977 0 002.094-2.094C24 16.014 24 12 24 12s0-4.014-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                              </svg>
-                            ),
-                          },
+                            icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M23.498 6.186a2.977 2.977 0 00-2.094-2.094C19.582 3.5 12 3.5 12 3.5s-7.582 0-9.404.592A2.977 2.977 0 00.502 6.186C0 7.986 0 12 0 12s0 4.014.502 5.814a2.977 2.977 0 002.094 2.094C4.418 20.5 12 20.5 12 20.5s7.582 0 9.404-.592a2.977 2.977 0 002.094-2.094C24 16.014 24 12 24 12s0-4.014-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                          }
                         ].map((social) => (
                           <a
                             key={social.name}
