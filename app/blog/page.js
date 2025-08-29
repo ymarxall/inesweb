@@ -189,7 +189,7 @@ export default function BlogPage() {
                       <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
                         <span className="text-white font-bold text-[0.6rem]">A</span>
                       </div>
-                      <span className="font-medium">Ahmad, Environmental Journalist</span>
+                      <span className="font-medium">Yusuf, Technology Enthusiast </span>
                     </div>
                     <div className="flex items-center gap-0.5">
                       <svg className="w-2.5 h-2.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
